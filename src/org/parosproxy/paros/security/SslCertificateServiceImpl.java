@@ -136,7 +136,7 @@ public final class SslCertificateServiceImpl implements SslCertificateService {
 				new X509CertificateHolder(caCert.getEncoded()).getSubject(),
 				BigInteger.valueOf(serial.getAndIncrement()),
 				new Date(System.currentTimeMillis() - Duration.ofDays(30).toMillis()),
-				new Date(System.currentTimeMillis() + Duration.ofDays(1000).toMillis()),
+				new Date(System.currentTimeMillis() + Duration.ofDays(90).toMillis()),
 				namebld.build(),
 				pubKey
 			);
